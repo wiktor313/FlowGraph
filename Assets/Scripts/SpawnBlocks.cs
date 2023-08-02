@@ -13,6 +13,7 @@ public class SpawnBlocks : MonoBehaviour
     [SerializeField] GameObject blockToSpawn3;
     [SerializeField] GameObject blockToSpawn4;
     [SerializeField] GameObject blockToSpawn5;
+    private GameObject blockToSpawn;
     [SerializeField] Transform canvasTransform;
     private Vector3 screenPosition;
     private Vector3 worldPosition;
