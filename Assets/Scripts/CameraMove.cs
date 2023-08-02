@@ -8,22 +8,22 @@ using UnityEngine.UI;
 
 public class CameraController : MonoBehaviour
 {
-    private int speed;
+    private float speed;
     private int maxHeight = 170;
     private void Start()
     {
-       speed = 5;
+       speed = 0.2f;
     }
     void Update()
     {
         if (Input.mouseScrollDelta.y > 0)
         {
-            speed += 1;
+            speed += 0.2f;
             Debug.Log(speed.ToString());
         }
-        else if (Input.mouseScrollDelta.y < 0 && speed>1)
+        else if (Input.mouseScrollDelta.y < 0 && speed>0.2f)
         { 
-        speed -= 1;
+        speed -= 0.2f;
             Debug.Log(speed.ToString());
         }
         if (!EventSystem.current.currentSelectedGameObject)
