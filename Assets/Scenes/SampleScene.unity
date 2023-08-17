@@ -135,7 +135,6 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420033}
-  - component: {fileID: 519420034}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -227,18 +226,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e33d3f8ac63c59e4aa3d58bc382802c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &519420034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6650c121bdabaa4ba777dbe31626030, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &822675080
@@ -805,6 +792,7 @@ GameObject:
   - component: {fileID: 1592432956}
   - component: {fileID: 1592432955}
   - component: {fileID: 1592432958}
+  - component: {fileID: 1592432959}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -880,6 +868,18 @@ MonoBehaviour:
   blockToSpawn4: {fileID: 4498671309520065206, guid: 44b966177ebf76749873f966a347810c, type: 3}
   blockToSpawn5: {fileID: 9095223328996116656, guid: d4e2ae01a65944d40bbad7b9d7bda46a, type: 3}
   canvasTransform: {fileID: 1769392285}
+--- !u!114 &1592432959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592432954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d0f078f993a73e4bb34501f8a2fde9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1735778493 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8035426885219290757, guid: 4d99420a45cd64346953e70afcce6bd9, type: 3}

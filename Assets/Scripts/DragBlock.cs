@@ -8,18 +8,6 @@ public class DragBlock : MonoBehaviour
 {
     Vector3 mousePosition;
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     private Vector3 GetMousePos()
     {
         return Camera.main.WorldToScreenPoint(transform.position);
@@ -30,6 +18,9 @@ public class DragBlock : MonoBehaviour
     }
     private void OnMouseDrag()
     {
+        if(GameObject.FindGameObjectWithTag("ToDelete"))
+      GameObject.FindGameObjectWithTag("ToDelete").tag = "Block";
+      gameObject.tag = "ToDelete";
       transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition - mousePosition);
     }
 }
