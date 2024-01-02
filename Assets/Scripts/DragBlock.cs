@@ -18,8 +18,7 @@ public class DragBlock : MonoBehaviour
     }
     private void OnMouseDrag()
     {
-        if(GameObject.FindGameObjectWithTag("ToDelete"))
-      GameObject.FindGameObjectWithTag("ToDelete").tag = "Block";
+      if(GameObject.FindGameObjectWithTag("ToDelete")) GameObject.FindGameObjectWithTag("ToDelete").tag = "Block";
       gameObject.tag = "ToDelete";
       transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition - mousePosition);
     }

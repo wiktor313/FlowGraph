@@ -8,12 +8,11 @@ using UnityEngine.UIElements;
 
 public class SpawnBlocks : MonoBehaviour
 {
-    [SerializeField] GameObject blockToSpawn1;
-    [SerializeField] GameObject blockToSpawn2;
-    [SerializeField] GameObject blockToSpawn3;
-    [SerializeField] GameObject blockToSpawn4;
-    [SerializeField] GameObject blockToSpawn5;
-    private GameObject blockToSpawn;
+    [SerializeField] private GameObject blockToSpawn1;
+    [SerializeField] private GameObject blockToSpawn2;
+    [SerializeField] private GameObject blockToSpawn3;
+    [SerializeField] private GameObject blockToSpawn4;
+    [SerializeField] private GameObject blockToSpawn5;
     [SerializeField] Transform canvasTransform;
     private Vector3 screenPosition;
     private Vector3 worldPosition;
@@ -26,14 +25,14 @@ public class SpawnBlocks : MonoBehaviour
             Spawn();
         }
     }
-    public void Coordinates()
+    private void Coordinates()
     {
         screenPosition = Input.mousePosition;
         screenPosition.z = -Camera.main.transform.position.z;
         worldPosition = Camera.main.ScreenToWorldPoint(screenPosition);
         localPosition = canvasTransform.InverseTransformPoint(worldPosition);
     }
-    public void Spawn()
+    private void Spawn()
     {
         if (Input.anyKeyDown)
         {

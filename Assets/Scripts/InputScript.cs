@@ -17,6 +17,8 @@ public class InputScript : MonoBehaviour
     }
     private string CalculateEquation(string equation)
     {
+        if (inputField == null)
+            return "B³¹d";
         try
         {
             string f = equation;
