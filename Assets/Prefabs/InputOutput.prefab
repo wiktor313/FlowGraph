@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 4626510676277967043}
   - component: {fileID: 3181012437739931414}
   - component: {fileID: 3086538980632932105}
-  - component: {fileID: 8110393619906526728}
   - component: {fileID: 2018596229928329042}
   m_Layer: 3
   m_Name: InputOutput
@@ -40,9 +39,9 @@ RectTransform:
   - {fileID: 4516759946174781266}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 16.077, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.7037, y: 28.58702}
+  m_AnchorMin: {x: 0.49883044, y: 0.48800004}
+  m_AnchorMax: {x: 0.49883044, y: 0.48800004}
+  m_AnchoredPosition: {x: 1.2963002, y: 34.58702}
   m_SizeDelta: {x: 196.8115, y: 75.9843}
   m_Pivot: {x: 0.49999994, y: 0.93}
 --- !u!222 &8998662659792592533
@@ -65,6 +64,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b23cfa62ab16bed47a59095d6624b8ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lineMaker: {fileID: 0}
 --- !u!114 &2140192764777533099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,18 +280,6 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
---- !u!114 &8110393619906526728
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3274402067022561899}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b23cfa62ab16bed47a59095d6624b8ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &2018596229928329042
 BoxCollider2D:
   m_ObjectHideFlags: 0

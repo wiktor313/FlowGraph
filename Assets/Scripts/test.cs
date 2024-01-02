@@ -4,33 +4,33 @@ using UnityEngine;
 
 public class test : MonoBehaviour
 {
+    private Camera _mainCamera;
+    private Renderer _renderer;
+    private Ray _ray;
+    private RaycastHit _hit;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        _mainCamera = Camera.main;
+        _renderer = GetComponent<Renderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 anchorPos = new Vector3(1, 1, 0);
-
-        Vector3 currentPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-        currentPos.z = 0;
-
-        Vector3 midPointVector = (currentPos + anchorPos) / 2;
-
-        transform.position = midPointVector;
-
-        Vector3 relative = currentPos - anchorPos;
-        float maggy = relative.magnitude;
-
-
-        transform.localScale = new Vector3(maggy / 2, 1, 0);
-        Quaternion rotationVector = Quaternion.LookRotation(relative);
-        rotationVector.z = 0;
-        rotationVector.w = 0;
-        transform.rotation = rotationVector;
+        if(Input.GetMouseButton(0)) 
+        {
+            _ray = new Ray(
+                _mainCamera.ScreenToWorldPoint(Input.mousePosition),
+                _mainCamera.transform.forward);
+            if(Physics.Raycast(_ray, out _hit, 1000f))
+            {
+               if(_hit.transform == transform) 
+                {
+                    Debug.Log("Click");
+                }
+            }
+        }
     }
 }

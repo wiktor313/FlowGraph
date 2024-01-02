@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.EventSystems;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -41,30 +42,35 @@ public class SpawnBlocks : MonoBehaviour
             {
                 Coordinates();
                 GameObject bts = Instantiate(blockToSpawn1, canvasTransform);
+                bts.GetComponent<DragBlock>().lineMaker = GameObject.FindGameObjectWithTag("GameController").GetComponent<LineMaker>();
                 bts.transform.SetLocalPositionAndRotation(localPosition, Quaternion.identity);
             }
             else if (Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad2))
             {
                 Coordinates();
                 GameObject bts = Instantiate(blockToSpawn2, canvasTransform);
+                bts.GetComponent<DragBlock>().lineMaker = GameObject.FindGameObjectWithTag("GameController").GetComponent<LineMaker>();
                 bts.transform.SetLocalPositionAndRotation(localPosition, Quaternion.identity);
             }
             else if (Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad3))
             {
                 Coordinates();
                 GameObject bts = Instantiate(blockToSpawn3, canvasTransform);
+                bts.GetComponent<DragBlock>().lineMaker = GameObject.FindGameObjectWithTag("GameController").GetComponent<LineMaker>();
                 bts.transform.SetLocalPositionAndRotation(localPosition, Quaternion.identity);
             }
             else if (Input.GetKeyDown(KeyCode.Alpha4) || Input.GetKeyDown(KeyCode.Keypad4))
             {
                 Coordinates();
                 GameObject bts = Instantiate(blockToSpawn4, canvasTransform);
+                bts.GetComponent<DragBlock>().lineMaker = GameObject.FindGameObjectWithTag("GameController").GetComponent<LineMaker>();
                 bts.transform.SetLocalPositionAndRotation(localPosition, Quaternion.identity);
             }
             else if (Input.GetKeyDown(KeyCode.Alpha5) || Input.GetKeyDown(KeyCode.Keypad5))
             {
                 Coordinates();
                 GameObject bts = Instantiate(blockToSpawn5, canvasTransform);
+                bts.GetComponent<DragBlock>().lineMaker = GameObject.FindGameObjectWithTag("GameController").GetComponent<LineMaker>();
                 bts.transform.SetLocalPositionAndRotation(localPosition, Quaternion.identity);
             }
         }

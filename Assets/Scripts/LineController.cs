@@ -1,15 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class LineController : MonoBehaviour
 {
     private LineRenderer lineRenderer;
-    private Transform[] points;
+    [SerializeField] public Transform[] points;
     private void Awake()
     {
         lineRenderer = GetComponent<LineRenderer>();
+    }
+
+    void Start()
+    {
+        SetUpLine(points);
     }
 
     public void SetUpLine(Transform[] points)
@@ -18,7 +24,6 @@ public class LineController : MonoBehaviour
         this.points = points;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Delete)) Destroy(lineRenderer);
