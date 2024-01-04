@@ -1,16 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PointScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    private void OnMouseDown()
+    [SerializeField] GameObject resizeObject;
+    [SerializeField] float resizeSpeed = 0.1f;
+
+    private void OnMouseDrag()
     {
-        Debug.Log(gameObject.name);
+        if(Input.GetAxis("Mouse X")>0) resizeObject.transform.localScale += new Vector3 (resizeSpeed,resizeSpeed,resizeSpeed);
+        if(Input.GetAxis("Mouse X")<0) resizeObject.transform.localScale -= new Vector3 (resizeSpeed,resizeSpeed,resizeSpeed);
+        if(Input.GetAxis("Mouse Y")>0) resizeObject.transform.localScale += new Vector3 (resizeSpeed,resizeSpeed,resizeSpeed);
+        if(Input.GetAxis("Mouse Y")<0) resizeObject.transform.localScale -= new Vector3 (resizeSpeed,resizeSpeed,resizeSpeed);
     }
-    private void Update()
-    {
-       // if (Input.GetMouseButtonDown(0)) Debug.Log("Click");
-    }
+
 }

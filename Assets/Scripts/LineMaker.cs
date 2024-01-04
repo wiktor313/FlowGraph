@@ -10,7 +10,7 @@ public class LineMaker : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.C) && !EventSystem.current.currentSelectedGameObject)
         {
             Debug.Log("Klik");
             if (point1 != null && point2 != null)

@@ -8,6 +8,13 @@ TagManager:
   - ToDelete
   - PointStart
   - PointStop
+  - PointStart2
+  - Playground
+  - PointDecision
+  - PointInputOutput
+  - PointProcess
+  - PointStop2
+  - Help
   layers:
   - Default
   - TransparentFX

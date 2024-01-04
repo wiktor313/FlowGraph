@@ -26,12 +26,15 @@ public class LineController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Delete)) Destroy(lineRenderer);
-        if (!lineRenderer.IsDestroyed())
-        { 
-            for (int i = 0; i < points.Length; i++)
+        if (points[1].IsDestroyed() || points[0].IsDestroyed()) Destroy(gameObject);
+        else
+        {
+            if (!lineRenderer.IsDestroyed())
             {
-                lineRenderer.SetPosition(i, points[i].position);
+                for (int i = 0; i < points.Length; i++)
+                {
+                    lineRenderer.SetPosition(i, points[i].position);
+                }
             }
         }
     }

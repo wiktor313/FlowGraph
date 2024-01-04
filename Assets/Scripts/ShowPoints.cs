@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShowPoints : MonoBehaviour
 {
     [SerializeField] GameObject main;
-    GameObject[] points = new GameObject[4];
+    GameObject point;
     private string newname;
     private void Start()
     {
@@ -14,17 +14,14 @@ public class ShowPoints : MonoBehaviour
             newname = main.name.Replace("(Clone)", "");
         }
         else newname = main.name;
-        points = GameObject.FindGameObjectsWithTag($"Point{newname}");
+        point = GameObject.FindGameObjectWithTag($"Point{newname}");
     }
     void Update()
     {
         if (main.tag == "ToDelete")
         {
-            foreach (GameObject go in points) 
-            {
-                go.SetActive(true);
-            }
+                point.SetActive(true);
         }
-        else for (int i = 0; i < 4; i++) foreach (GameObject go in points) go.SetActive(false);
+        else point.SetActive(false);
     }
 }
