@@ -12,6 +12,13 @@ public class CloseHelp : MonoBehaviour
     {
         bt.onClick.AddListener(Close);
     }
+    private void Update()
+    {
+        if(Input.GetKeyUp(KeyCode.Escape)) 
+        {
+            Close();
+        }
+    }
     void Close()
     {
         go.SetActive(false);

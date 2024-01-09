@@ -9,6 +9,10 @@ public class DragBlock : MonoBehaviour
     Vector3 mousePosition;
 
     [SerializeField] public LineMaker lineMaker;
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape)) { lineMaker.point1 = null; lineMaker.point2 = null; }
+    }
     private Vector3 GetMousePos()
     {
         return Camera.main.WorldToScreenPoint(transform.position);
