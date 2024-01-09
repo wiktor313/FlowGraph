@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class ShowHelp : MonoBehaviour
@@ -13,7 +14,7 @@ public class ShowHelp : MonoBehaviour
     }
     private void Update()
     {
-        if(Input.GetKeyUp(KeyCode.H))
+        if(Input.GetKeyUp(KeyCode.H) && !EventSystem.current.currentSelectedGameObject)
         {
             Show();
         }
